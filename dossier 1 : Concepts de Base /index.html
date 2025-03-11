@@ -4,28 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concepts de Base</title>
+
+    <!-- Ce link permet de relier cette page html à ma page css -->
     <link rel="stylesheet" href="Mon_dossier_style_1.css">
+
+    <!-- Ces deux link permette de faire fonctionné des police/typographie personnalisé -->
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 
 </head>
 <body class="Mon_Body">
+    <!-- Pour Mon tire j'ai ajouter la balise "h1" qui représente le Titre principal de ma page -->
     <h1 class="Mon_Titre">Ce ci est le Titre de ma page pour l'évaluation</h1>
+
+    <!-- Pour ajouter un lien on peut utilisé la balise "a" pour y coller son lien ou un lien externe -->
     <a class="Mon_Lien" href="Pageannex.html">Cliquez ici pour aller à la deuxième page</a>
+
+    <!-- Pour ajouter un paragraphe à ma page j'ai ajouter la balise "p" qui comme sont nom l'indique permet d'ajouter du text -->
     <p class="Mon_Paragraphe">
         Lorem ipsum dolor sit amet. Qui laborum animi quo expedita voluptate in quos iusto. Est atque sapiente eum debitis necessitatibus hic odit repellat et atque perspiciatis est dignissimos debitis et ipsa libero ut suscipit autem. Rem nisi delectus et assumenda quasi ut quas nostrum?</br>
         Et Quis sapiente et iste magnam non harum sunt 33 aspernatur quia aut praesentium suscipit ut pariatur libero. Aut tempora optio sit quam aliquid aut veritatis repellat ad doloribus odit aut consequatur labore ut quod architecto.
     </p>
+
+    <!-- Pour mettre un bouton on utilise juste la balise "button", par la suite on lui ajoute un onclick pour justement attribuer une fonction qui dans ce cas la "Afficher()"-->
     <div class="Mon_Bouton_Container">
         <button class="Mon_Bouton" onclick="Afficher()">Mon Bouton</button>
     </div>
+
+    <!-- Pour ajouter une image à ma page j'ai ajouter la balise "img" qui permet comme sont nom l'indique d'ajouter une image qu'on peut soit importé depuis son ordinateur soit dupuis une url-->
+    <!-- Je l'ai mise dans une div pour pouvoir la déplacé avec flex box-->
     <div class="Mon_Image-Container">
         <img class="Mon_Image" src="Mon_image_de_code.jpg">
     </div>
+
+
     <script>
         function Afficher(){
             alert("ceci est un message d'alerte");
         }
+        // le alert crée un petit pop up qui affiche le message que l'on veux
     </script>
+    <!-- 
+    Le code JavaScript interagit avec le DOM(Document Object Model) en côté client pour manipuler la structure et le contenu d'une page web. 
+    Ce code est exécuté dans le navigateur de l'utilisateur, permettant ainsi de modifier les éléments du DOM en temps réel, sans nécessiter de rechargement de la page.
+    JavaScript peut identifier des éléments du DOM à l'aide de méthodes telles que "getElementById", "querySelector", et "querySelectorAll".
+    Ces méthodes permettent de récupérer des éléments spécifiques ou des ensembles d'éléments basés sur leurs "id", "class", ou types de balises.
+     -->
 </body>
 </html>

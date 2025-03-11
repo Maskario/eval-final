@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="compteur-container">
+        <p>Temps écoulé : <span id="compteur">00:00:00</span></p>
+    </div>    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let secondes = 0, minutes = 0, heures = 0;
+
+        function mettreAJourCompteur() {
+            secondes++;
+
+            if (secondes === 60) {
+                secondes = 0;
+                minutes++;
+            }
+            if (minutes === 60) {
+                minutes = 0;
+                heures++;
+            }
+
+            // Formater l'affichage en 00:00:00
+            let affichage = 
+                (heures < 10 ? "0" : "") + heures + ":" + 
+                (minutes < 10 ? "0" : "") + minutes + ":" + 
+                (secondes < 10 ? "0" : "") + secondes;
+
+            document.getElementById("compteur").textContent = affichage;
+        }
+
+        // Met à jour le compteur chaque seconde
+        setInterval(mettreAJourCompteur, 1000);
+    });
+</script>
+
+
+</html>
